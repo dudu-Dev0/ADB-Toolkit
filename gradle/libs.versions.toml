@@ -10,12 +10,16 @@ androidx-core-ktx = "1.16.0"
 androidx-espresso-core = "3.6.1"
 androidx-lifecycle = "2.8.4"
 androidx-material = "1.12.0"
+androidx-datastore = "+"
 androidx-test-junit = "1.2.1"
-compose-multiplatform = "1.7.3"
+compose-multiplatform = "1.8.0"
 junit = "4.13.2"
 kotlin = "2.1.20"
 kotlinx-coroutines = "1.10.2"
 kadb = "1.2.1"
+kolor = "3.0.0-beta01"
+material3 = "1.4.0-alpha14"
+data-saver = "1.2.2"
 
 [libraries]
 kotlin-test = { module = "org.jetbrains.kotlin:kotlin-test", version.ref = "kotlin" }
@@ -30,8 +34,14 @@ androidx-constraintlayout = { group = "androidx.constraintlayout", name = "const
 androidx-activity-compose = { module = "androidx.activity:activity-compose", version.ref = "androidx-activityCompose" }
 androidx-lifecycle-viewmodel = { group = "org.jetbrains.androidx.lifecycle", name = "lifecycle-viewmodel", version.ref = "androidx-lifecycle" }
 androidx-lifecycle-runtime-compose = { group = "org.jetbrains.androidx.lifecycle", name = "lifecycle-runtime-compose", version.ref = "androidx-lifecycle" }
+androidx-datastore = { group = "androidx.datastore", name = "datastore", version.ref = "androidx-datastore"}
+androidx-datastore-preferences = { group = "androidx.datastore", name = "datastore-preferences", version.ref = "androidx-datastore"}
 kotlinx-coroutines-swing = { group = "org.jetbrains.kotlinx", name = "kotlinx-coroutines-swing", version.ref = "kotlinx-coroutines" }
 kadb = { group = "com.flyfishxu", name = "kadb", version.ref = "kadb"}
+kolor = { group = "com.materialkolor", name = "material-kolor", version.ref = "kolor"}
+material3 = { group = "androidx.compose.material3", name = "material3", version.ref = "material3"}
+data-saver = { group = "io.github.FunnySaltyFish", name = "data-saver-core", version.ref = "data-saver"}
+data-saver-datastore = { group = "io.github.FunnySaltyFish", name = "data-saver-data-store-preferences", version.ref = "data-saver"}
 [plugins]
 androidApplication = { id = "com.android.application", version.ref = "agp" }
 androidLibrary = { id = "com.android.library", version.ref = "agp" }

@@ -29,13 +29,16 @@ kotlin {
     }*/
     
     jvm("desktop")
-    
+    //linuxArm64()
     sourceSets {
         val desktopMain by getting
         
         androidMain.dependencies {
             implementation(compose.preview)
             implementation(libs.androidx.activity.compose)
+            implementation(libs.androidx.datastore)
+            implementation(libs.androidx.datastore.preferences)
+            implementation(libs.data.saver.datastore)
         }
         commonMain.dependencies {
             implementation(compose.runtime)
@@ -48,6 +51,8 @@ kotlin {
             implementation(libs.androidx.lifecycle.viewmodel)
             implementation(libs.androidx.lifecycle.runtime.compose)
             implementation(libs.kadb)
+            implementation(libs.kolor)
+            implementation(libs.data.saver)
         }
         desktopMain.dependencies {
             implementation(compose.desktop.currentOs)
@@ -70,6 +75,7 @@ android {
     packaging {
         resources {
             excludes += "/META-INF/{AL2.0,LGPL2.1}"
+            exclude("META-INF/versions/9/OSGI-INF/MANIFEST.MF")
         }
     }
     buildTypes {
