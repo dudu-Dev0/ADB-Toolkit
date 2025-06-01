@@ -1,5 +1,9 @@
 package com.dudu.adbtools
 
+import adb_toolkit.composeapp.generated.resources.Res
+import adb_toolkit.composeapp.generated.resources.about
+import adb_toolkit.composeapp.generated.resources.device
+import adb_toolkit.composeapp.generated.resources.files
 import androidx.compose.runtime.*
 import androidx.compose.ui.Modifier
 import org.jetbrains.compose.ui.tooling.preview.Preview
@@ -24,8 +28,11 @@ import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.layout.onGloballyPositioned
 import androidx.compose.ui.unit.dp
 import com.dudu.adbtools.theme.AppTheme
+import com.dudu.adbtools.ui.about.AboutScreen
 import com.dudu.adbtools.ui.devices.DeviceScreen
+import com.dudu.adbtools.ui.files.FileScreen
 import com.funny.data_saver.core.LocalDataSaver
+import org.jetbrains.compose.resources.stringResource
 
 
 data class Screen(
@@ -34,14 +41,15 @@ data class Screen(
     val content: @Composable () -> Unit
 )
 
-val screens = listOf(
-    Screen("device", Icons.Rounded.Devices, { DeviceScreen() }),
-    Screen("files", Icons.Rounded.FileOpen, { DeviceScreen() }),
-    Screen("about", Icons.Rounded.Info, { DeviceScreen() })
-)
+
 
 @Composable
 fun App() {
+    val screens = listOf(
+        Screen(stringResource(Res.string.device), Icons.Rounded.Devices, { DeviceScreen() }),
+        Screen(stringResource(Res.string.files), Icons.Rounded.FileOpen, { FileScreen() }),
+        Screen(stringResource(Res.string.about), Icons.Rounded.Info, { AboutScreen() })
+    )
     CompositionLocalProvider(LocalDataSaver provides AppConfig.dataSaver) {
         AppTheme {
             var screenWidth by remember { mutableStateOf(0) }

@@ -1,4 +1,8 @@
 <resources>
     <string name="add_devices">添加设备</string>
     <string name="choose_device">选择设备</string>
+    <string name="device_info">设备信息</string>
+    <string name="device">设备</string>
+    <string name="files">文件</string>
+    <string name="about">关于</string>
 </resources>
