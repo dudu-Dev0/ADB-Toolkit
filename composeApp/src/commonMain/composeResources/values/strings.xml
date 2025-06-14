@@ -5,4 +5,6 @@
     <string name="device">设备</string>
     <string name="files">文件</string>
     <string name="about">关于</string>
+    <string name="cant_get">无法获取</string>
+    <string name="no_device">还没有已连接的设备哦</string>
 </resources>
