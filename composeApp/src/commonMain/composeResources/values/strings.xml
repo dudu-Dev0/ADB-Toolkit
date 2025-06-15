@@ -7,4 +7,11 @@
     <string name="about">关于</string>
     <string name="cant_get">无法获取</string>
     <string name="no_device">还没有已连接的设备哦</string>
+    <string name="pair">配对</string>
+    <string name="pair_code">配对码</string>
+    <string name="connect">连接</string>
+    <string name="ip">IP地址</string>
+    <string name="port">端口号</string>
+    <string name="pair_device">配对设备</string>
+    <string name="confirm">确认</string>
 </resources>

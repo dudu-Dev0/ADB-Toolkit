@@ -4,6 +4,8 @@ import com.flyfishxu.kadb.Kadb
 
 object KadbManager {
     private var kadbConnections = mutableListOf<Device>()
+    var choosingDevice: Device? = null
+
     fun connect(ip: String, port: Int): Kadb {
         val kadb = Kadb(ip, port)
         kadbConnections.add(kadb.getDevice())
